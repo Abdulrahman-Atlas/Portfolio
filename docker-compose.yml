@@ -1,0 +1,9 @@
+services:
+  personal-card:
+    image: nginx:alpine
+    container_name: personal-card
+    ports:
+      - "8081:80"
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+    restart: unless-stopped
